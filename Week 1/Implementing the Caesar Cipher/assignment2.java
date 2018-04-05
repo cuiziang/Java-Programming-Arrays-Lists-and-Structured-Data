@@ -6,7 +6,7 @@ public class CaesarCipher {
         StringBuilder encrypted = new StringBuilder(input);
         //Write down the alphabet
         String alphabetu = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String alphabetl = "abcdefghijkmlnopqrstuvwxyz";
+        String alphabetl = "abcdefghijklmnopqrstuvwxyz";
         //Compute the shifted alphabet
         String shiftedAlphabetu = alphabetu.substring(key)+
         alphabetu.substring(0,key);
@@ -37,7 +37,7 @@ public class CaesarCipher {
         StringBuilder encrypted = new StringBuilder(input);
         //Write down the alphabet
         String alphabetu = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        String alphabetl = "abcdefghijkmlnopqrstuvwxyz";
+        String alphabetl = "abcdefghijklmnopqrstuvwxyz";
         //Compute the shifted alphabet
         String shiftedAlphabeteu = alphabetu.substring(key1)+
         alphabetu.substring(0,key1);

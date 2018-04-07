@@ -8,11 +8,21 @@ public class WordLengths
             if (!Character.isLetter(word.charAt(0))){
                 l--;
             }
-            if (!Character.isLetter(word.charAt(word.length()-1))){
+            if (!Character.isLetter(word.charAt(word.length()-1)) && word.length()!=1){
                 l--;
             }
-                    counts[l] += 1;
+                    counts[l]++;
         }
+        int max=0;
+        int index=0;
+        for (int i=1;i<counts.length;i++){
+            if(counts[i]>max){
+                max=counts[i];
+                index=i;
+            }
+            
+        }
+        System.out.println("The most common word length is " + index);
     }
     
     public int indexOfMax(int[] values){

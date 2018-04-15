@@ -23,10 +23,11 @@ public class CharactersInPlay {
         FileResource resource = new FileResource();
 
         for (String l : resource.lines()) {
+            l = l.toLowerCase();
             int indexOfPeriod = l.indexOf(".");
             String character = "";
             if (indexOfPeriod != -1) {
-                character = l.substring(0, indexOfPeriod - 1);
+                character = l.substring(0, indexOfPeriod);
                 int indexOfCharacter = characters.indexOf(character);
                 if (indexOfCharacter == -1) {
                     characters.add(character);
@@ -42,13 +43,13 @@ public class CharactersInPlay {
 
     public void tester() {
         this.findAllCharacters();
-        int mCharacter = 0;
-        for (int k = 0; k < parts.size(); k++) {
-            if (parts.get(k) > parts.get(k)) {
-                mCharacter = k;
+        int indexOfCharacter = 0;
+        for (int k = 0; k < characters.size(); k++) {
+            if (parts.get(k) > parts.get(indexOfCharacter)) {
+                indexOfCharacter = k;
             }
         }
-        System.out.println("The speaking parts of main character is: " + characters.get(mCharacter) + " " + parts.get(mCharacter) + "\n");
+        System.out.println("The speaking parts of main character is: " + characters.get(indexOfCharacter) + " " + parts.get(indexOfCharacter) + "\n");
         charactersWithNumParts(10, 15);
     }
 

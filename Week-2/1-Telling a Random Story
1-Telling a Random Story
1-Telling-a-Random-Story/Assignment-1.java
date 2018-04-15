@@ -50,6 +50,7 @@ public class WordFrequencies {
             System.out.println(myFreqs.get(k) + " " + myWords.get(k));
         }
         System.out.println("The word that occurs most often and its count are: " + myWords.get(index) + " " + myFreqs.get(index));
+        System.out.println("The unique word is: " + myWords.size();
     }
 
 }

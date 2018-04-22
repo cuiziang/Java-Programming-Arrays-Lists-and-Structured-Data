@@ -54,7 +54,7 @@ public class SmallestValue {
         for (int i = 0; i < 3; i++) {
             System.out.println("Reading frame starting with " + i + " results in 2 unique codons");
             this.buildCodonMap(i, dna);
-            System.out.println("and most common codon is " + this.getMostCommonCodon() + " with count 2");
+            System.out.println("and most common codon is " + mostCommonCodon + " with count " + this.codonsMap.get(mostCommonCodon));
             this.printCodonCounts(1,5);
         }
     }
